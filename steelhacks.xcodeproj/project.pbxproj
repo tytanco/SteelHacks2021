@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EE50B8C22317FFEA4BD5A4C /* Pods_steelhacksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D010CC43E36839B495BB2084 /* Pods_steelhacksTests.framework */; };
+		6084B95106E8834DE7819F20 /* Pods_steelhacks_steelhacksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D7D0E92EE4E7D934B945BE /* Pods_steelhacks_steelhacksUITests.framework */; };
+		9EA7F986EBB9ACD0367BE619 /* Pods_steelhacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A938B1AB988039386C05F5 /* Pods_steelhacks.framework */; };
 		A60E62E625E09734001968C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E62E525E09734001968C5 /* AppDelegate.swift */; };
 		A60E62E825E09734001968C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E62E725E09734001968C5 /* SceneDelegate.swift */; };
 		A60E62EA25E09734001968C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E62E925E09734001968C5 /* ViewController.swift */; };
@@ -16,6 +19,7 @@
 		A60E62F525E09737001968C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60E62F325E09737001968C5 /* LaunchScreen.storyboard */; };
 		A60E630025E09737001968C5 /* steelhacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E62FF25E09737001968C5 /* steelhacksTests.swift */; };
 		A60E630B25E09737001968C5 /* steelhacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E630A25E09737001968C5 /* steelhacksUITests.swift */; };
+		A60E631C25E09A96001968C5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A60E631B25E09A96001968C5 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EEFD22D4A7F3A7B4C1D1CA7 /* Pods-steelhacksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacksTests.debug.xcconfig"; path = "Target Support Files/Pods-steelhacksTests/Pods-steelhacksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		17E48B46E0C2185ADD9A01BE /* Pods-steelhacks-steelhacksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacks-steelhacksUITests.debug.xcconfig"; path = "Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7941D32E4C18CBC02572C67F /* Pods-steelhacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacks.debug.xcconfig"; path = "Target Support Files/Pods-steelhacks/Pods-steelhacks.debug.xcconfig"; sourceTree = "<group>"; };
+		9A42F4F802F8D5005AEA8894 /* Pods-steelhacksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacksTests.release.xcconfig"; path = "Target Support Files/Pods-steelhacksTests/Pods-steelhacksTests.release.xcconfig"; sourceTree = "<group>"; };
+		A48B161B48A75F869BE94225 /* Pods-steelhacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacks.release.xcconfig"; path = "Target Support Files/Pods-steelhacks/Pods-steelhacks.release.xcconfig"; sourceTree = "<group>"; };
 		A60E62E225E09734001968C5 /* steelhacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steelhacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60E62E525E09734001968C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A60E62E725E09734001968C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,11 @@
 		A60E630625E09737001968C5 /* steelhacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = steelhacksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60E630A25E09737001968C5 /* steelhacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = steelhacksUITests.swift; sourceTree = "<group>"; };
 		A60E630C25E09737001968C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A60E631B25E09A96001968C5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B2D7D0E92EE4E7D934B945BE /* Pods_steelhacks_steelhacksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steelhacks_steelhacksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1BA3547FDBB05700E878AF /* Pods-steelhacks-steelhacksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacks-steelhacksUITests.release.xcconfig"; path = "Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D010CC43E36839B495BB2084 /* Pods_steelhacksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steelhacksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A938B1AB988039386C05F5 /* Pods_steelhacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steelhacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA7F986EBB9ACD0367BE619 /* Pods_steelhacks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE50B8C22317FFEA4BD5A4C /* Pods_steelhacksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,19 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6084B95106E8834DE7819F20 /* Pods_steelhacks_steelhacksUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89D641C0E83A7829F14ED8D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7941D32E4C18CBC02572C67F /* Pods-steelhacks.debug.xcconfig */,
+				A48B161B48A75F869BE94225 /* Pods-steelhacks.release.xcconfig */,
+				17E48B46E0C2185ADD9A01BE /* Pods-steelhacks-steelhacksUITests.debug.xcconfig */,
+				CB1BA3547FDBB05700E878AF /* Pods-steelhacks-steelhacksUITests.release.xcconfig */,
+				0EEFD22D4A7F3A7B4C1D1CA7 /* Pods-steelhacksTests.debug.xcconfig */,
+				9A42F4F802F8D5005AEA8894 /* Pods-steelhacksTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A60E62D925E09734001968C5 = {
 			isa = PBXGroup;
 			children = (
+				A60E631B25E09A96001968C5 /* Podfile */,
 				A60E62E425E09734001968C5 /* steelhacks */,
 				A60E62FE25E09737001968C5 /* steelhacksTests */,
 				A60E630925E09737001968C5 /* steelhacksUITests */,
 				A60E62E325E09734001968C5 /* Products */,
+				89D641C0E83A7829F14ED8D1 /* Pods */,
+				C03E445B5F9B28B410899D65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +164,16 @@
 			path = steelhacksUITests;
 			sourceTree = "<group>";
 		};
+		C03E445B5F9B28B410899D65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6A938B1AB988039386C05F5 /* Pods_steelhacks.framework */,
+				B2D7D0E92EE4E7D934B945BE /* Pods_steelhacks_steelhacksUITests.framework */,
+				D010CC43E36839B495BB2084 /* Pods_steelhacksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A60E630F25E09737001968C5 /* Build configuration list for PBXNativeTarget "steelhacks" */;
 			buildPhases = (
+				79E5ADC371FBF1465B614D92 /* [CP] Check Pods Manifest.lock */,
 				A60E62DE25E09734001968C5 /* Sources */,
 				A60E62DF25E09734001968C5 /* Frameworks */,
 				A60E62E025E09734001968C5 /* Resources */,
+				DB1E2536D73B7E90326F405B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A60E631225E09737001968C5 /* Build configuration list for PBXNativeTarget "steelhacksTests" */;
 			buildPhases = (
+				9B39290533D1EB02DF25F1DB /* [CP] Check Pods Manifest.lock */,
 				A60E62F725E09737001968C5 /* Sources */,
 				A60E62F825E09737001968C5 /* Frameworks */,
 				A60E62F925E09737001968C5 /* Resources */,
@@ -173,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A60E631525E09737001968C5 /* Build configuration list for PBXNativeTarget "steelhacksUITests" */;
 			buildPhases = (
+				43C54F07200E896FAC8D8CD9 /* [CP] Check Pods Manifest.lock */,
 				A60E630225E09737001968C5 /* Sources */,
 				A60E630325E09737001968C5 /* Frameworks */,
 				A60E630425E09737001968C5 /* Resources */,
+				0C459192CA748E21EA8C8592 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +284,7 @@
 			files = (
 				A60E62F525E09737001968C5 /* LaunchScreen.storyboard in Resources */,
 				A60E62F225E09737001968C5 /* Assets.xcassets in Resources */,
+				A60E631C25E09A96001968C5 /* Podfile in Resources */,
 				A60E62ED25E09734001968C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +304,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C459192CA748E21EA8C8592 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43C54F07200E896FAC8D8CD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-steelhacks-steelhacksUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79E5ADC371FBF1465B614D92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-steelhacks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B39290533D1EB02DF25F1DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-steelhacksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB1E2536D73B7E90326F405B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-steelhacks/Pods-steelhacks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-steelhacks/Pods-steelhacks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-steelhacks/Pods-steelhacks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A60E62DE25E09734001968C5 /* Sources */ = {
@@ -437,6 +589,7 @@
 		};
 		A60E631025E09737001968C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7941D32E4C18CBC02572C67F /* Pods-steelhacks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +609,7 @@
 		};
 		A60E631125E09737001968C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48B161B48A75F869BE94225 /* Pods-steelhacks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +629,7 @@
 		};
 		A60E631325E09737001968C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EEFD22D4A7F3A7B4C1D1CA7 /* Pods-steelhacksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +652,7 @@
 		};
 		A60E631425E09737001968C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A42F4F802F8D5005AEA8894 /* Pods-steelhacksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +675,7 @@
 		};
 		A60E631625E09737001968C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17E48B46E0C2185ADD9A01BE /* Pods-steelhacks-steelhacksUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +696,7 @@
 		};
 		A60E631725E09737001968C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1BA3547FDBB05700E878AF /* Pods-steelhacks-steelhacksUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
