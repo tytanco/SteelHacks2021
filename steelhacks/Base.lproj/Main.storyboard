@@ -233,9 +233,31 @@
                                 <rect key="frame" x="20" y="75" width="374" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="36"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.1843137255" green="0.61176470589999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="EmailField" translatesAutoresizingMaskIntoConstraints="NO" id="Y70-Oy-Riq">
+                                <rect key="frame" x="36" y="271" width="343" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="EmailField" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-e0-Gv2">
+                                <rect key="frame" x="36" y="366" width="343" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5W-yf-9o3">
+                                <rect key="frame" x="36" y="494" width="343" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="LogInButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-o9-hZ8">
+                                <rect key="frame" x="115" y="604" width="185" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ForgotPassword"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1cg-hw-lVt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -249,6 +271,9 @@
     </scenes>
     <resources>
         <image name="CircleBackground" width="256" height="256"/>
+        <image name="EmailField" width="343" height="50"/>
+        <image name="ForgotPassword" width="184.5" height="16.5"/>
+        <image name="LogInButton" width="343" height="56"/>
         <image name="Logo" width="4205" height="4205"/>
         <image name="OrganizationSignUp" width="295" height="48"/>
         <image name="Rect1" width="375" height="635"/>
