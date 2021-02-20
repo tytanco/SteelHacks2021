@@ -142,6 +142,28 @@
                     <view key="view" contentMode="scaleToFill" id="BW9-hT-dii">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rect1" translatesAutoresizingMaskIntoConstraints="NO" id="xez-xO-Vet">
+                                <rect key="frame" x="-6" y="-101" width="427" height="733"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rect3" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-T1-s2p">
+                                <rect key="frame" x="-6" y="630" width="427" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rect2" translatesAutoresizingMaskIntoConstraints="NO" id="nMR-xt-WDC">
+                                <rect key="frame" x="-6" y="630" width="427" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Start Volunteering Today!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T3Z-NT-49X">
+                                <rect key="frame" x="87" y="36" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bfj-nn-TlA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -149,12 +171,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywq-fZ-iwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1729" y="75"/>
+            <point key="canvasLocation" x="-1730.4347826086957" y="75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Rect1" width="375" height="635"/>
+        <image name="Rect2" width="375" height="177"/>
+        <image name="Rect3" width="375" height="177"/>
         <image name="WelcomeBackground" width="375" height="510"/>
         <image name="WelcomeButton" width="250" height="48"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
