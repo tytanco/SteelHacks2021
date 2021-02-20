@@ -13,74 +13,19 @@ import Firebase
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var kolodaView: KolodaView!
     private var locationManager = CLLocationManager()
-    
-    let images = ["one", "two", "three", "four"]
+
     let db = Firestore.firestore()
     let storage = Storage.storage()
-    var profileimage: Array<UIImage> = [UIImage()]
-    var size = 0
-
-    override func viewWillAppear(_ animated: Bool) {
-        db.collection("organizations").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                self.size = querySnapshot!.documents.count
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    let imgurl = document.get("imageURL")
-                    let gsReference = self.storage.reference(forURL: imgurl as! String)
-
-                    gsReference.getData(maxSize: 20 * 1024 * 1024) {
-                        data, error in
-                        if let error = error {
-                            print(error)
-                        } else {
-                            self.profileimage[0] = UIImage(data: data!)!
-                        }
-                    }
-                }
-                print("done with pictures")
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
-        
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-        self.locationManager.delegate = self
-        self.locationManager.requestAlwaysAuthorization()
-        
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.startUpdatingLocation()
-        
-        
     }
 
-
-    func locationManager(didFailWithError error: NSError!) {
-            print("didFailWithError: \(error.description)")
-        let errorAlert = UIAlertController(title: "Error", message: "Failed to get your location.", preferredStyle: UIAlertController.Style.alert)
-                                               
-        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                (result : UIAlertAction) -> Void in
-                print("OK")
-            }
-            errorAlert.addAction(okAction)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let newLocation:CLLocation = locations.last! as CLLocation
-        print("current position: \(newLocation.coordinate.longitude) , \(newLocation.coordinate.latitude)")
-     
-    }
-    
 }
 
 
@@ -90,7 +35,7 @@ extension ViewController: KolodaViewDelegate {
   }
   
   func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-    let alert = UIAlertController(title: "Congratulation!", message: "Now you're \(images[index])", preferredStyle: .alert)
+    let alert = UIAlertController(title: "Congratulation!", message: "You matched with " + dbArr.dbData[index].name!, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default))
     self.present(alert, animated: true)
   }
@@ -112,12 +57,12 @@ extension ViewController: KolodaViewDelegate {
 extension ViewController: KolodaViewDataSource {
   
   func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-    return profileimage.count
+    return dbArr.dbData.count
   }
   
   func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
     
-    let view = UIImageView(image: profileimage[index])
+    let view = UIImageView(image: dbArr.dbData[index].image)
     
     view.layer.cornerRadius = 20
     view.clipsToBounds = true

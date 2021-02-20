@@ -9,7 +9,7 @@ import UIKit
 
 class SignInViewController: UIViewController {
     @IBAction func nextButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "backToSignUp", sender: sender)
+        performSegue(withIdentifier: "signInToHome", sender: sender)
     }
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class SignInViewController: UIViewController {
 
             super.prepare(for: segue, sender: sender)
 
-            if let secondViewController = segue.destination as? SignUpViewController {
+            if let secondViewController = segue.destination as? ViewController {
                 secondViewController.modalPresentationStyle = .fullScreen
             }
     }

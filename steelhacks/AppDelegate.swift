@@ -8,16 +8,68 @@
 import UIKit
 import CoreData
 import Firebase
+import CoreLocation
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
+    private var locationManager = CLLocationManager()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        
+        db.collection("organizations").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                //self.size = querySnapshot!.documents.count
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let imgurl = document.get("imageURL")
+                    let gsReference = storage.reference(forURL: imgurl as! String)
+                    let orgName = document.get("name")
+
+                    gsReference.getData(maxSize: 20 * 1024 * 1024) {
+                        data, error in
+                        if let error = error {
+                            print(error)
+                        } else {
+                            dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String)))
+                        }
+                    }
+                }
+                print("done with pictures")
+            }
+        }
         return true
+    }
+    
+    func locationManager(didFailWithError error: NSError!) {
+            print("didFailWithError: \(error.description)")
+        let errorAlert = UIAlertController(title: "Error", message: "Failed to get your location.", preferredStyle: UIAlertController.Style.alert)
+                                               
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+                (result : UIAlertAction) -> Void in
+                print("OK")
+            }
+            errorAlert.addAction(okAction)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let newLocation:CLLocation = locations.last! as CLLocation
+        print("current position: \(newLocation.coordinate.longitude) , \(newLocation.coordinate.latitude)")
+     
     }
 
     // MARK: UISceneSession Lifecycle
@@ -79,5 +131,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+struct databaseData {
+    let image: UIImage?
+    let name: String?
+    
+}
+
+struct dbArr {
+    //static var imageArr: Array<UIImage> = Array()
+    static var dbData: Array<databaseData> = Array()
 }
 
