@@ -46,7 +46,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
             super.prepare(for: segue, sender: sender)
 
-            if let secondViewController = segue.destination as? ViewController {
+            if let secondViewController = segue.destination as? MainTabBarController {
                 secondViewController.modalPresentationStyle = .fullScreen
             }
         

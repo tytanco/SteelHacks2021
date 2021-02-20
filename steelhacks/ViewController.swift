@@ -66,12 +66,15 @@ extension ViewController: KolodaViewDataSource {
     
     view.layer.cornerRadius = 20
     view.clipsToBounds = true
-    
-    let text = UILabel(frame:CGRect(origin: CGPoint(x: 40,y: 450), size: CGSize(width: 150, height: 40)))
-    text.text = "Name"
+
+    let text = UILabel(frame:CGRect(origin: CGPoint(x: 0,y: 450), size: CGSize(width: 339, height: 40)))
+    text.text = dbArr.dbData[index].position! + ", " + dbArr.dbData[index].name!
+    text.textColor = UIColor.black
     text.font = UIFont(name: text.font.fontName, size: 20)
-    text.textAlignment = NSTextAlignment.center
-    text.backgroundColor = UIColor.black
+    text.textAlignment = NSTextAlignment.left
+    text.backgroundColor = UIColor.white
+    text.layer.masksToBounds = true
+    text.layer.cornerRadius = 5
     
     view.addSubview(text)
     
