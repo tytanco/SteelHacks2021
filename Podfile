@@ -22,5 +22,6 @@ target 'steelhacks' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
 
 end

@@ -94,6 +94,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="inJ-g2-1RN">
+                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="XNn-ai-mcd"/>
+                                    <tabBarItem systemItem="more" id="SA5-7f-Tu5"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -111,7 +120,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-441" y="-305"/>
+            <point key="canvasLocation" x="-442.02898550724643" y="-305.35714285714283"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="umW-Lh-MDo">
@@ -253,7 +262,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="LogInButton"/>
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="hEN-BB-2Pc" eventType="touchUpInside" id="dP6-w4-u00"/>
+                                    <action selector="loginAction:" destination="hEN-BB-2Pc" eventType="touchUpInside" id="IOk-E4-hVc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-o9-hZ8">
@@ -267,7 +276,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="2i4-LE-w9t"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="signInToHome" customClass="SegueFromRight" customModule="steelhacks" customModuleProvider="target" id="bZ5-gm-2kA"/>
+                        <outlet property="email" destination="Y70-Oy-Riq" id="fPY-2O-spM"/>
+                        <outlet property="password" destination="kT1-e0-Gv2" id="6An-F0-7fG"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="signInToHome" customClass="SegueFromRight" customModule="steelhacks" customModuleProvider="target" id="qGO-ub-2cn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7m-r3-ytI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
