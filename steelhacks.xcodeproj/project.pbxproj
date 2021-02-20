@@ -24,6 +24,8 @@
 		A60E637625E0AF4B001968C5 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60E637525E0AF4B001968C5 /* GameController.framework */; };
 		A60E637B25E0BA68001968C5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A60E637A25E0BA39001968C5 /* libsqlite3.tbd */; };
 		A6A71CF525E172B900181075 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = A6A71CF425E1729800181075 /* fonts */; };
+		A6A71CFA25E176F900181075 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71CF925E176F900181075 /* WelcomeViewController.swift */; };
+		A6A71CFF25E1778E00181075 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71CFE25E1778E00181075 /* SignUpViewController.swift */; };
 		A6E9F07525E16FE6004CA785 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6E9F07425E16FE6004CA785 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		A60E637525E0AF4B001968C5 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		A60E637A25E0BA39001968C5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A6A71CF425E1729800181075 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = text; path = fonts; sourceTree = SOURCE_ROOT; };
+		A6A71CF925E176F900181075 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A6A71CFE25E1778E00181075 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A6E9F07425E16FE6004CA785 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B2D7D0E92EE4E7D934B945BE /* Pods_steelhacks_steelhacksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steelhacks_steelhacksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1BA3547FDBB05700E878AF /* Pods-steelhacks-steelhacksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacks-steelhacksUITests.release.xcconfig"; path = "Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				A60E62F625E09737001968C5 /* Info.plist */,
 				A60E62EE25E09734001968C5 /* steelhacks.xcdatamodeld */,
 				A60E636D25E0ABBD001968C5 /* ProfileViewController.swift */,
+				A6A71CF925E176F900181075 /* WelcomeViewController.swift */,
+				A6A71CFE25E1778E00181075 /* SignUpViewController.swift */,
 			);
 			path = steelhacks;
 			sourceTree = "<group>";
@@ -433,8 +439,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A60E62EA25E09734001968C5 /* ViewController.swift in Sources */,
+				A6A71CFF25E1778E00181075 /* SignUpViewController.swift in Sources */,
 				A60E62E625E09734001968C5 /* AppDelegate.swift in Sources */,
 				A60E636E25E0ABBD001968C5 /* ProfileViewController.swift in Sources */,
+				A6A71CFA25E176F900181075 /* WelcomeViewController.swift in Sources */,
 				A60E62F025E09734001968C5 /* steelhacks.xcdatamodeld in Sources */,
 				A60E62E825E09734001968C5 /* SceneDelegate.swift in Sources */,
 			);

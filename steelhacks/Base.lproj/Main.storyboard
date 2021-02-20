@@ -8,15 +8,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
         <array key="Poppins-SemiBold.ttf">
             <string>Poppins-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="kqf-Fb-aNI">
             <objects>
-                <viewController storyboardIdentifier="WelcomeVC" id="tnJ-L2-zcH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="tnJ-L2-zcH" customClass="WelcomeViewController" customModule="steelhacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NYG-T5-AVT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,15 +48,35 @@
                                 <rect key="frame" x="82" y="791" width="250" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="WelcomeButton"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="tnJ-L2-zcH" eventType="touchUpInside" id="tUU-uH-HrY"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GoServe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GA-Hz-H2a">
+                                <rect key="frame" x="130" y="254" width="154" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A volunteer matching service" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-ba-EZp">
+                                <rect key="frame" x="20" y="313" width="374" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E63-DQ-nZJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="day-wi-ChE" kind="show" identifier="toSignUp" id="9JP-Ph-p0V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6d1-V3-wAY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2659" y="75"/>
+            <point key="canvasLocation" x="-2659.4202898550725" y="75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -112,16 +135,17 @@
             </objects>
             <point key="canvasLocation" x="779.71014492753625" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="CdQ-Nl-gnL">
             <objects>
-                <viewController id="day-wi-ChE" sceneMemberID="viewController">
+                <viewController id="day-wi-ChE" customClass="SignUpViewController" customModule="steelhacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BW9-hT-dii">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bfj-nn-TlA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qbR-Hn-fc5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywq-fZ-iwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
