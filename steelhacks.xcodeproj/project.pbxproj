@@ -29,6 +29,7 @@
 		A6A71D0625E17C4A00181075 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A71D0325E17C4A00181075 /* Poppins-SemiBold.ttf */; };
 		A6A71D0725E17C4A00181075 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A71D0425E17C4A00181075 /* Poppins-Bold.ttf */; };
 		A6A71D0825E17C4A00181075 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6A71D0525E17C4A00181075 /* Poppins-Regular.ttf */; };
+		A6A71D0D25E18C7100181075 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71D0C25E18C7100181075 /* SignInViewController.swift */; };
 		A6E9F07525E16FE6004CA785 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6E9F07425E16FE6004CA785 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		A6A71D0325E17C4A00181075 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "fonts/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		A6A71D0425E17C4A00181075 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "fonts/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		A6A71D0525E17C4A00181075 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "fonts/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		A6A71D0C25E18C7100181075 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A6E9F07425E16FE6004CA785 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B2D7D0E92EE4E7D934B945BE /* Pods_steelhacks_steelhacksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steelhacks_steelhacksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1BA3547FDBB05700E878AF /* Pods-steelhacks-steelhacksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacks-steelhacksUITests.release.xcconfig"; path = "Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				A60E636D25E0ABBD001968C5 /* ProfileViewController.swift */,
 				A6A71CF925E176F900181075 /* WelcomeViewController.swift */,
 				A6A71CFE25E1778E00181075 /* SignUpViewController.swift */,
+				A6A71D0C25E18C7100181075 /* SignInViewController.swift */,
 			);
 			path = steelhacks;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				A6A71CFF25E1778E00181075 /* SignUpViewController.swift in Sources */,
 				A60E62E625E09734001968C5 /* AppDelegate.swift in Sources */,
 				A60E636E25E0ABBD001968C5 /* ProfileViewController.swift in Sources */,
+				A6A71D0D25E18C7100181075 /* SignInViewController.swift in Sources */,
 				A6A71CFA25E176F900181075 /* WelcomeViewController.swift in Sources */,
 				A60E62F025E09734001968C5 /* steelhacks.xcdatamodeld in Sources */,
 				A60E62E825E09734001968C5 /* SceneDelegate.swift in Sources */,
