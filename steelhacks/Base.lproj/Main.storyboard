@@ -25,6 +25,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4iz-ZO-jhb"/>
                     <connections>
                         <outlet property="kolodaView" destination="gSq-Gf-D95" id="NBj-LH-2Ox"/>
                     </connections>
@@ -37,7 +38,32 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-214.49275362318843" y="75"/>
+            <point key="canvasLocation" x="-99" y="75"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="umW-Lh-MDo">
+            <objects>
+                <viewController storyboardIdentifier="ProfileID" id="jOz-5p-GrZ" customClass="ProfileViewController" customModule="steelhacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tNP-st-DMi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9p-AP-SeE">
+                                <rect key="frame" x="20" y="102" width="374" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8ar-DQ-AsZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yPe-6K-JA3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8O7-qF-jwz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="779.71014492753625" y="75"/>
         </scene>
     </scenes>
     <resources>
