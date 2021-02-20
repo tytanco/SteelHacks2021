@@ -16,9 +16,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let images = ["one", "two", "three", "four"]
     let db = Firestore.firestore()
+    let storage = Storage.storage()
+    var profileimage: Array<UIImage> = [UIImage()]
+    var size = 0
 
+    override func viewWillAppear(_ animated: Bool) {
+        db.collection("organizations").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.size = querySnapshot!.documents.count
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    let imgurl = document.get("imageURL")
+                    let gsReference = self.storage.reference(forURL: imgurl as! String)
+
+                    gsReference.getData(maxSize: 20 * 1024 * 1024) {
+                        data, error in
+                        if let error = error {
+                            print(error)
+                        } else {
+                            self.profileimage[0] = UIImage(data: data!)!
+                        }
+                    }
+                }
+                print("done with pictures")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -28,7 +59,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
-        //self.locationManager.requestLocation()
+        
+        
     }
 
 
@@ -80,11 +112,12 @@ extension ViewController: KolodaViewDelegate {
 extension ViewController: KolodaViewDataSource {
   
   func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-    return images.count
+    return profileimage.count
   }
   
   func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-    let view = UIImageView(image: UIImage(named: images[index]))
+    
+    let view = UIImageView(image: profileimage[index])
     
     view.layer.cornerRadius = 20
     view.clipsToBounds = true

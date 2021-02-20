@@ -59,6 +59,8 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This application needs access to your location information</string>
+	<key>FirebaseAutomaticScreenReportingEnabled</key>
+	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

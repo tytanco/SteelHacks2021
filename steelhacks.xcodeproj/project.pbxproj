@@ -23,7 +23,7 @@
 		A60E636E25E0ABBD001968C5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60E636D25E0ABBD001968C5 /* ProfileViewController.swift */; };
 		A60E637625E0AF4B001968C5 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60E637525E0AF4B001968C5 /* GameController.framework */; };
 		A60E637B25E0BA68001968C5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A60E637A25E0BA39001968C5 /* libsqlite3.tbd */; };
-		A60E638025E0C8E4001968C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A60E637F25E0C8E4001968C5 /* GoogleService-Info.plist */; };
+		A60E63CA25E0D941001968C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A60E63C925E0D941001968C5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		A60E636D25E0ABBD001968C5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A60E637525E0AF4B001968C5 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		A60E637A25E0BA39001968C5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		A60E637F25E0C8E4001968C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A60E63C925E0D941001968C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2D7D0E92EE4E7D934B945BE /* Pods_steelhacks_steelhacksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steelhacks_steelhacksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1BA3547FDBB05700E878AF /* Pods-steelhacks-steelhacksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-steelhacks-steelhacksUITests.release.xcconfig"; path = "Target Support Files/Pods-steelhacks-steelhacksUITests/Pods-steelhacks-steelhacksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D010CC43E36839B495BB2084 /* Pods_steelhacksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_steelhacksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,9 +148,9 @@
 				A60E62E725E09734001968C5 /* SceneDelegate.swift */,
 				A60E62E925E09734001968C5 /* ViewController.swift */,
 				A60E62EB25E09734001968C5 /* Main.storyboard */,
-				A60E637F25E0C8E4001968C5 /* GoogleService-Info.plist */,
 				A60E62F125E09737001968C5 /* Assets.xcassets */,
 				A60E62F325E09737001968C5 /* LaunchScreen.storyboard */,
+				A60E63C925E0D941001968C5 /* GoogleService-Info.plist */,
 				A60E62F625E09737001968C5 /* Info.plist */,
 				A60E62EE25E09734001968C5 /* steelhacks.xcdatamodeld */,
 				A60E636D25E0ABBD001968C5 /* ProfileViewController.swift */,
@@ -298,7 +298,7 @@
 			files = (
 				A60E62F525E09737001968C5 /* LaunchScreen.storyboard in Resources */,
 				A60E62F225E09737001968C5 /* Assets.xcassets in Resources */,
-				A60E638025E0C8E4001968C5 /* GoogleService-Info.plist in Resources */,
+				A60E63CA25E0D941001968C5 /* GoogleService-Info.plist in Resources */,
 				A60E631C25E09A96001968C5 /* Podfile in Resources */,
 				A60E62ED25E09734001968C5 /* Main.storyboard in Resources */,
 			);
