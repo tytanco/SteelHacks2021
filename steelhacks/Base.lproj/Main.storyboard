@@ -74,7 +74,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="day-wi-ChE" kind="show" identifier="toSignUp" id="9JP-Ph-p0V"/>
+                        <segue destination="day-wi-ChE" kind="show" identifier="toSignUp" customClass="SegueFromRight" customModule="steelhacks" customModuleProvider="target" id="9JP-Ph-p0V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6d1-V3-wAY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,7 +230,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXS-JA-IWp">
-                                <rect key="frame" x="20" y="64" width="374" height="45"/>
+                                <rect key="frame" x="20" y="75" width="374" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -241,18 +241,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="2i4-LE-w9t"/>
-                    <connections>
-                        <segue destination="day-wi-ChE" kind="show" identifier="backToSignUp" id="0jy-KL-9e3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7m-r3-ytI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1757.9710144927537" y="-305.35714285714283"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="0jy-KL-9e3"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="CircleBackground" width="256" height="256"/>
         <image name="Logo" width="4205" height="4205"/>
