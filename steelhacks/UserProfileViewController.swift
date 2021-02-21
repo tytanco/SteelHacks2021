@@ -19,6 +19,9 @@ class UserProfileViewController: UIViewController {
         profilePic.image = userArr.usrData.profilePic
         email.text = userArr.usrData.email
         bio.text = userArr.usrData.bio
+        
+        profilePic.layer.masksToBounds = true
+        profilePic.layer.cornerRadius = 5
     }
     
     override func viewDidLoad() {

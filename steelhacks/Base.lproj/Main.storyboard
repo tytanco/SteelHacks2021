@@ -192,14 +192,10 @@
                                 <rect key="frame" x="20" y="130" width="374" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7d-Ts-Fev">
-                                <rect key="frame" x="20" y="190" width="368" height="528"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="messages" translatesAutoresizingMaskIntoConstraints="NO" id="XQG-dg-lej">
+                                <rect key="frame" x="20" y="190" width="374" height="549"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="messages"/>
-                                <connections>
-                                    <segue destination="IWy-cR-bmh" kind="custom" customClass="SegueFromRight" customModule="steelhacks" customModuleProvider="target" id="vg1-e4-Too"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rPI-9x-rXc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -210,21 +206,6 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="-1140.4017857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Mjg-TH-a7a">
-            <objects>
-                <viewController id="IWy-cR-bmh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9UG-EF-AOI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Pws-H3-ggk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5ql-LJ-CJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1249" y="-1140"/>
-        </scene>
         <!--Profile View Controller-->
         <scene sceneID="umW-Lh-MDo">
             <objects>
@@ -234,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9p-AP-SeE">
-                                <rect key="frame" x="20" y="102" width="374" height="32"/>
+                                <rect key="frame" x="20" y="92" width="374" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
                                 <nil key="textColor"/>

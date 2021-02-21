@@ -98,9 +98,6 @@ extension ViewController: KolodaViewDataSource {
   }
   
   func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-    print("at index ", index)
-    
-    
     
     let view = UIImageView(image: dbArr.dbData[index].image)
     
