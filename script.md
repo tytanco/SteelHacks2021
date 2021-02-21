@@ -11,3 +11,4 @@
     - The presentation and the project are both enjoyable to watch and use, 9-10
 
 #### Overall Layout
+The layout of the video will mirror the categories empahsized in the rubric.
