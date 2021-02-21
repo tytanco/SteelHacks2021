@@ -47,6 +47,8 @@ extension ViewController: KolodaViewDelegate {
             
             let customViewController = storyboard.instantiateViewController(withIdentifier: "ProfileID") as!ProfileViewController
             
+            customViewController.profileID = index
+            
             self.present(customViewController, animated: true, completion: nil)
         }
     
