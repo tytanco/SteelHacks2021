@@ -14,7 +14,8 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     private var locationManager = CLLocationManager()
-
+    var userPosition: usrPos!
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,24 +36,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             } else {
                 //self.size = querySnapshot!.documents.count
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    //print("\(document.documentID) => \(document.data())")
                     let imgurl = document.get("imageURL")
-                    let gsReference = storage.reference(forURL: imgurl as! String)
                     let orgName = document.get("name")
                     let posName = document.get("position")
-
-                    gsReference.getData(maxSize: 20 * 1024 * 1024) {
-                        data, error in
-                        if let error = error {
-                            print(error)
-                        } else {
-                            dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String)))
+                    let bio = document.get("bio")
+                    
+                    if (imgurl  != nil && orgName != nil && posName != nil && bio != nil){
+                        let local = document.get("location") as! GeoPoint
+                        let d = self.getDistance(lat:local.latitude, lon:local.longitude, plat:self.userPosition.lat, plon:self.userPosition.lon)
+                        let gsReference = storage.reference(forURL: imgurl as! String)
+                        gsReference.getData(maxSize: 20 * 1024 * 1024) {
+                            data, error in
+                            if let error = error {
+                                print(error)
+                            } else {
+                                dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String), d: (d), bio: (bio as! String)))
+                                dbArr.dbData.sort{ $0.d < $1.d }
+                            }
                         }
                     }
                 }
-                print("done with pictures")
+                
+                
             }
+            
+            
+            
         }
+        
         return true
     }
     
@@ -69,7 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation:CLLocation = locations.last! as CLLocation
-        print("current position: \(newLocation.coordinate.longitude) , \(newLocation.coordinate.latitude)")
+        //print("current position: \(newLocation.coordinate.longitude) , \(newLocation.coordinate.latitude)")
+        userPosition = usrPos.init(lat: newLocation.coordinate.latitude, lon: newLocation.coordinate.longitude)
      
     }
 
@@ -131,6 +144,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             }
         }
     }
+    
+    func getDistance(lat: Double, lon: Double, plat: Double, plon: Double) -> (Double){
+        if (lat == 0 && lon == 0){
+            return 0;
+        }
+        
+        let R = 6371e3 * 0.000621371;
+        let phi1 = plat * Double.pi / 180;
+        let phi2 = lat * Double.pi / 180;
+        let delPhi = (lat-plat) * Double.pi / 180;
+        let delLam = (lon-plon) * Double.pi / 180;
+        
+        let a = sin(delPhi/2.0) * sin(delPhi/2.0) + cos(phi1) * cos(phi2) * sin(delLam/2.0) * sin(delLam/2.0);
+        let c = 2 * atan2(sqrt(a), sqrt(1-a));
+        
+        return (c * R);
+    }
 
 }
 
@@ -138,7 +168,14 @@ struct databaseData {
     let image: UIImage?
     let name: String?
     let position: String?
+    let d: Double
+    let bio: String?
     
+}
+
+struct usrPos {
+    let lat: Double
+    let lon: Double
 }
 
 struct dbArr {
@@ -146,3 +183,13 @@ struct dbArr {
     static var dbData: Array<databaseData> = Array()
 }
 
+struct userData {
+    let name: String?
+    let profilePic: UIImage?
+    let bio: String?
+    let email: String?
+}
+
+struct userArr {
+    static var usrData: userData!
+}

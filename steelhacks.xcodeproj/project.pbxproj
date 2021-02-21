@@ -24,6 +24,7 @@
 		A60E637625E0AF4B001968C5 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60E637525E0AF4B001968C5 /* GameController.framework */; };
 		A60E637B25E0BA68001968C5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A60E637A25E0BA39001968C5 /* libsqlite3.tbd */; };
 		A69C20FE25E1CC6700E6568D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C20FD25E1CC6700E6568D /* MainTabBarController.swift */; };
+		A69C210325E1EB4900E6568D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C210225E1EB4800E6568D /* UserProfileViewController.swift */; };
 		A6A71CF525E172B900181075 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = A6A71CF425E1729800181075 /* fonts */; };
 		A6A71CFA25E176F900181075 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71CF925E176F900181075 /* WelcomeViewController.swift */; };
 		A6A71CFF25E1778E00181075 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A71CFE25E1778E00181075 /* SignUpViewController.swift */; };
@@ -78,6 +79,7 @@
 		A60E637525E0AF4B001968C5 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		A60E637A25E0BA39001968C5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A69C20FD25E1CC6700E6568D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		A69C210225E1EB4800E6568D /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		A6A71CF425E1729800181075 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = text; path = fonts; sourceTree = SOURCE_ROOT; };
 		A6A71CF925E176F900181075 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A6A71CFE25E1778E00181075 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				A6A71D0C25E18C7100181075 /* SignInViewController.swift */,
 				A6A71D1125E192FF00181075 /* SegueFromRight.swift */,
 				A69C20FD25E1CC6700E6568D /* MainTabBarController.swift */,
+				A69C210225E1EB4800E6568D /* UserProfileViewController.swift */,
 			);
 			path = steelhacks;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				A6A71D0D25E18C7100181075 /* SignInViewController.swift in Sources */,
 				A6A71CFA25E176F900181075 /* WelcomeViewController.swift in Sources */,
 				A60E62F025E09734001968C5 /* steelhacks.xcdatamodeld in Sources */,
+				A69C210325E1EB4900E6568D /* UserProfileViewController.swift in Sources */,
 				A60E62E825E09734001968C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
