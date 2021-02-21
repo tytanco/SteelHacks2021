@@ -40,8 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                     let imgurl = document.get("imageURL")
                     let orgName = document.get("name")
                     let posName = document.get("position")
+                    let bio = document.get("bio")
                     
-                    if (imgurl  != nil && orgName != nil && posName != nil){
+                    if (imgurl  != nil && orgName != nil && posName != nil && bio != nil){
                         let local = document.get("location") as! GeoPoint
                         let d = self.getDistance(lat:local.latitude, lon:local.longitude, plat:self.userPosition.lat, plon:self.userPosition.lon)
                         print(d)
@@ -51,9 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                             if let error = error {
                                 print(error)
                             } else {
-                                dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String), d: (d)))
+                                dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String), d: (d), bio: (bio as! String)))
                                 dbArr.dbData.sort{ $0.d < $1.d }
-
+                                print(dbArr.dbData[0].d)
                                 print(dbArr.dbData.count)
                             }
                         }
@@ -171,6 +172,7 @@ struct databaseData {
     let name: String?
     let position: String?
     let d: Double
+    let bio: String?
     
 }
 
