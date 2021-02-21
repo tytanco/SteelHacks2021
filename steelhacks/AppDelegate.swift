@@ -34,9 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                //self.size = querySnapshot!.documents.count
                 for document in querySnapshot!.documents {
-                    //print("\(document.documentID) => \(document.data())")
                     let imgurl = document.get("imageURL")
                     let orgName = document.get("name")
                     let posName = document.get("position")
@@ -57,15 +55,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                         }
                     }
                 }
-                
-                
             }
-            
-            
-            
         }
         
         return true
+    }
+    
+    func getDistance(lat: Double, lon: Double, plat: Double, plon: Double) -> (Double){
+        if (lat == 0 && lon == 0){
+            return 0;
+        }
+        
+        let R = 6371e3 * 0.000621371;
+        let phi1 = plat * Double.pi / 180;
+        let phi2 = lat * Double.pi / 180;
+        let delPhi = (lat-plat) * Double.pi / 180;
+        let delLam = (lon-plon) * Double.pi / 180;
+        
+        let a = sin(delPhi/2.0) * sin(delPhi/2.0) + cos(phi1) * cos(phi2) * sin(delLam/2.0) * sin(delLam/2.0);
+        let c = 2 * atan2(sqrt(a), sqrt(1-a));
+        
+        return (c * R);
     }
     
     func locationManager(didFailWithError error: NSError!) {
@@ -145,22 +155,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
     }
     
-    func getDistance(lat: Double, lon: Double, plat: Double, plon: Double) -> (Double){
-        if (lat == 0 && lon == 0){
-            return 0;
-        }
-        
-        let R = 6371e3 * 0.000621371;
-        let phi1 = plat * Double.pi / 180;
-        let phi2 = lat * Double.pi / 180;
-        let delPhi = (lat-plat) * Double.pi / 180;
-        let delLam = (lon-plon) * Double.pi / 180;
-        
-        let a = sin(delPhi/2.0) * sin(delPhi/2.0) + cos(phi1) * cos(phi2) * sin(delLam/2.0) * sin(delLam/2.0);
-        let c = 2 * atan2(sqrt(a), sqrt(1-a));
-        
-        return (c * R);
-    }
 
 }
 
@@ -179,7 +173,6 @@ struct usrPos {
 }
 
 struct dbArr {
-    //static var imageArr: Array<UIImage> = Array()
     static var dbData: Array<databaseData> = Array()
 }
 
