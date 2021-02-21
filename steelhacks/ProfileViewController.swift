@@ -9,9 +9,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
+    var profileID: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        name.text = dbArr.dbData[profileID!].name
     }
 }
