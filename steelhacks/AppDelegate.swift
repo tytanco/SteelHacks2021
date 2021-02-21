@@ -14,7 +14,8 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     private var locationManager = CLLocationManager()
-
+    var userPosition: usrPos!
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -34,12 +35,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 print("Error getting documents: \(err)")
             } else {
                 //self.size = querySnapshot!.documents.count
+                
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     let imgurl = document.get("imageURL")
                     let orgName = document.get("name")
                     let posName = document.get("position")
+                    
+                    
                     if (imgurl  != nil && orgName != nil && posName != nil){
+                        let local = document.get("location") as! GeoPoint
+                        let d = self.getDistance(lat:local.latitude, lon:local.longitude, plat:self.userPosition.lat, plon:self.userPosition.lon)
+                        print(d)
                         let gsReference = storage.reference(forURL: imgurl as! String)
                         gsReference.getData(maxSize: 20 * 1024 * 1024) {
                             data, error in
@@ -71,6 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation:CLLocation = locations.last! as CLLocation
         print("current position: \(newLocation.coordinate.longitude) , \(newLocation.coordinate.latitude)")
+        userPosition = usrPos.init(lat: newLocation.coordinate.latitude, lon: newLocation.coordinate.longitude)
      
     }
 
@@ -133,9 +141,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
     }
     
-//    func getDistance(var lat, var lon, var plat, varplon){
-//
-//    }
+    func getDistance(lat: Double, lon: Double, plat: Double, plon: Double) -> (Double){
+        if (lat == 0 && lon == 0){
+            return 0;
+        }
+        
+        let R = 6371e3 * 0.000621371;
+        let phi1 = plat * Double.pi / 180;
+        let phi2 = lat * Double.pi / 180;
+        let delPhi = (lat-plat) * Double.pi / 180;
+        let delLam = (lon-plon) * Double.pi / 180;
+        
+        let a = sin(delPhi/2.0) * sin(delPhi/2.0) + cos(phi1) * cos(phi2) * sin(delLam/2.0) * sin(delLam/2.0);
+        let c = 2 * atan2(sqrt(a), sqrt(1-a));
+        
+        return (c * R);
+    }
 
 }
 
@@ -144,6 +165,11 @@ struct databaseData {
     let name: String?
     let position: String?
     
+}
+
+struct usrPos {
+    let lat: Double
+    let lon: Double
 }
 
 struct dbArr {
