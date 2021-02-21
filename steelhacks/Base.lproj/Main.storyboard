@@ -38,7 +38,7 @@
                                 <color key="textColor" red="0.16862745098039217" green="0.65098039215686276" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-f3-O4E">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-f3-O4E">
                                 <rect key="frame" x="20" y="628" width="374" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLt-Ib-y9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="-1959.375"/>
+            <point key="canvasLocation" x="35" y="-1684"/>
         </scene>
         <!--Chat-->
         <scene sceneID="gXr-3k-hgs">
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNS-EF-QzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="-1140.4017857142856"/>
+            <point key="canvasLocation" x="35" y="-992"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="umW-Lh-MDo">
@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8O7-qF-jwz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8115942028987" y="-305.35714285714283"/>
+            <point key="canvasLocation" x="893" y="-305"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="CdQ-Nl-gnL">
@@ -449,7 +449,7 @@
                                 <color key="textColor" red="0.8382864766" green="1" blue="0.7517845313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is the biography of tbe user." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4eB-Bu-3Ds">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This is the biography of tbe user." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eB-Bu-3Ds">
                                 <rect key="frame" x="54" y="329" width="306" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.8382864766" green="1" blue="0.7517845313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -484,7 +484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOs-we-Uci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="502.90178571428567"/>
+            <point key="canvasLocation" x="35" y="425"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="gqM-aq-Rkf">
@@ -493,6 +493,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cQh-mj-R7m"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cPj-lm-w1E">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.16862745100000001" green="0.65098039220000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
