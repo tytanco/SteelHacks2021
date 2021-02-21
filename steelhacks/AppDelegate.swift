@@ -184,5 +184,13 @@ struct dbArr {
     static var dbData: Array<databaseData> = Array()
 }
 
+struct userData {
+    let name: String?
+    let profilePic: UIImage?
+    let bio: String?
+    let email: String?
+}
 
-
+struct userArr {
+    static var usrData: userData!
+}

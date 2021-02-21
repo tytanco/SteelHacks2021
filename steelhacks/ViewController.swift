@@ -13,6 +13,7 @@ import Firebase
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var kolodaView: KolodaView!
     private var locationManager = CLLocationManager()
+    static var userInformation: userData!
 
     let db = Firestore.firestore()
     let storage = Storage.storage()
@@ -20,10 +21,34 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
+        
+        // The below query is for retrieving profile information
+        let docRef = db.collection("users").document(Auth.auth().currentUser!.uid)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let uName = document.get("name")
+                let imgurl = document.get("imageURL")
+                let biography = document.get("bio")
+                let mail = document.get("email")
+                let gsReference = self.storage.reference(forURL: imgurl as! String)
+                
+                gsReference.getData(maxSize: 20 * 1024 * 1024) {
+                    data, error in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        userArr.usrData = userData(name: (uName as! String), profilePic: UIImage(data: data!)!, bio: (biography as! String), email: (mail as! String))
+                    }
+                }
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
 
 }
@@ -35,23 +60,29 @@ extension ViewController: KolodaViewDelegate {
   }
   
   func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-    let alert = UIAlertController(title: "Congratulation!", message: "You matched with " + dbArr.dbData[index].name!, preferredStyle: .alert)
+    /*let alert = UIAlertController(title: "Congratulation!", message: "You matched with " + dbArr.dbData[index].name!, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default))
-    self.present(alert, animated: true)
+    self.present(alert, animated: true)*/
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    
+    let customViewController = storyboard.instantiateViewController(withIdentifier: "ProfileID") as!ProfileViewController
+    
+    customViewController.profileID = index
+    
+    self.present(customViewController, animated: true, completion: nil)
   }
     
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if (direction == SwipeResultDirection.right) {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
-            let customViewController = storyboard.instantiateViewController(withIdentifier: "ProfileID") as!ProfileViewController
             
-            customViewController.profileID = index
-            
-            self.present(customViewController, animated: true, completion: nil)
+            let alert = UIAlertController(title: "CongratulationS!", message: "You matched with " + dbArr.dbData[index].name!, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
         }
     
+        
     }
 }
 
