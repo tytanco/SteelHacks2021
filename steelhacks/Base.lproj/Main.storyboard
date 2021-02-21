@@ -89,10 +89,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSq-Gf-D95" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="20" y="58" width="374" height="532"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="connectBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-BM-yui">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="298"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pe-7S-kKo">
+                                <rect key="frame" x="20" y="49" width="175" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSq-Gf-D95" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="20" y="113" width="374" height="532"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -121,6 +131,35 @@
                     <view key="view" contentMode="scaleToFill" id="G5c-od-7eu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter &amp; Explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxg-Cs-CDE">
+                                <rect key="frame" x="20" y="62" width="335" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="38"/>
+                                <color key="textColor" red="0.16862745100000001" green="0.65098039220000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="searchButton" translatesAutoresizingMaskIntoConstraints="NO" id="1Jw-fe-g6b">
+                                <rect key="frame" x="363" y="71" width="31" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tinyBar" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-fb-gZj">
+                                <rect key="frame" x="18" y="112" width="46" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="distanceSlider" translatesAutoresizingMaskIntoConstraints="NO" id="0kt-BO-9tN">
+                                <rect key="frame" x="20" y="136" width="374" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="areaCards" translatesAutoresizingMaskIntoConstraints="NO" id="ua8-bm-EfB">
+                                <rect key="frame" x="0.0" y="480" width="414" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recommendCards" translatesAutoresizingMaskIntoConstraints="NO" id="LI5-J2-0gV">
+                                <rect key="frame" x="0.0" y="227" width="414" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dCX-gV-ea9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -128,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLt-Ib-y9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="-1959"/>
+            <point key="canvasLocation" x="34.782608695652179" y="-1959.375"/>
         </scene>
         <!--Chat-->
         <scene sceneID="gXr-3k-hgs">
@@ -137,6 +176,31 @@
                     <view key="view" contentMode="scaleToFill" id="r9J-UG-T5Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topRect" translatesAutoresizingMaskIntoConstraints="NO" id="lx5-Nj-0O1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-D7-ocd">
+                                <rect key="frame" x="20" y="59" width="374" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="searchBar" translatesAutoresizingMaskIntoConstraints="NO" id="WQq-9I-bOg">
+                                <rect key="frame" x="20" y="130" width="374" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7d-Ts-Fev">
+                                <rect key="frame" x="20" y="190" width="368" height="528"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="messages"/>
+                                <connections>
+                                    <segue destination="IWy-cR-bmh" kind="custom" customClass="SegueFromRight" customModule="steelhacks" customModuleProvider="target" id="vg1-e4-Too"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rPI-9x-rXc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -144,7 +208,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNS-EF-QzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="-1140"/>
+            <point key="canvasLocation" x="34.782608695652179" y="-1140.4017857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mjg-TH-a7a">
+            <objects>
+                <viewController id="IWy-cR-bmh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9UG-EF-AOI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Pws-H3-ggk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ql-LJ-CJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="-1140"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="umW-Lh-MDo">
@@ -389,10 +468,6 @@
                                 <color key="textColor" red="0.8382864766" green="1" blue="0.7517845313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-5z-PeX">
-                                <rect key="frame" x="87" y="311" width="240" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This is the biography of tbe user." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4eB-Bu-3Ds">
                                 <rect key="frame" x="54" y="329" width="306" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -410,6 +485,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="notifications"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-5z-PeX">
+                                <rect key="frame" x="87" y="311" width="240" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZcA-HA-OB1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -463,18 +542,27 @@
         <image name="VolunteerSignUp" width="295" height="48"/>
         <image name="WelcomeBackground" width="375" height="510"/>
         <image name="WelcomeButton" width="250" height="48"/>
+        <image name="areaCards" width="367" height="339.5"/>
         <image name="background1" width="375" height="440"/>
         <image name="background2" width="370" height="372"/>
         <image name="background3" width="370" height="372"/>
+        <image name="connectBackground" width="375" height="344"/>
+        <image name="distanceSlider" width="317" height="70"/>
         <image name="hoursVolunteered" width="306" height="71"/>
         <image name="interestAreas" width="306" height="71"/>
         <image name="link" catalog="system" width="128" height="122"/>
         <image name="location" width="306" height="71"/>
+        <image name="messages" width="368" height="528"/>
         <image name="notifications" width="30" height="30"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="recommendCards" width="375" height="253"/>
         <image name="safari.fill" catalog="system" width="128" height="121"/>
+        <image name="searchBar" width="342" height="38"/>
+        <image name="searchButton" width="24" height="24"/>
         <image name="separator" width="303" height="1"/>
         <image name="settings" width="30" height="31"/>
+        <image name="tinyBar" width="40" height="10"/>
+        <image name="topRect" width="375" height="102"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

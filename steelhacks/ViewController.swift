@@ -23,11 +23,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for element in dbArr.dbData {
-            print(element.name)
-            print(element.d)
-        }
-        
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -86,7 +81,7 @@ extension ViewController: KolodaViewDelegate {
         if (direction == SwipeResultDirection.right) {
             
             
-            let alert = UIAlertController(title: "CongratulationS!", message: "You matched with " + dbArr.dbData[index].name!, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Congratulations!", message: "You matched with " + dbArr.dbData[index].name!, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alert, animated: true)
         }
@@ -112,13 +107,14 @@ extension ViewController: KolodaViewDataSource {
     view.layer.cornerRadius = 20
     view.clipsToBounds = true
 
-    let text = UILabel(frame:CGRect(origin: CGPoint(x: 0,y: 430), size: CGSize(width: 339, height: 40)))
-    let subtext = UILabel(frame:CGRect(origin: CGPoint(x: 0,y: 460), size: CGSize(width: 339, height: 30)))
-    text.text = dbArr.dbData[index].position! + ", " + dbArr.dbData[index].name!
+    let text = UILabel(frame:CGRect(origin: CGPoint(x: 0,y: 420), size: CGSize(width: 339, height: 40)))
+    let subtext = UILabel(frame:CGRect(origin: CGPoint(x: 0,y: 455), size: CGSize(width: 339, height: 40)))
+    let postext = UILabel(frame:CGRect(origin: CGPoint(x: 0,y: 390), size: CGSize(width: 339, height: 40)))
+    text.text = " " + dbArr.dbData[index].name!
     text.textColor = UIColor.black
-    text.font = UIFont(name: text.font.fontName, size: 20)
+    text.font = UIFont.init(name: "Poppins", size: 18)
     text.textAlignment = NSTextAlignment.left
-    text.backgroundColor = UIColor.white
+    text.backgroundColor = UIColor.systemGray5
     text.layer.masksToBounds = true
     text.layer.cornerRadius = 5
     view.addSubview(text)
@@ -126,21 +122,30 @@ extension ViewController: KolodaViewDataSource {
     var distance = ""
     
     if(dbArr.dbData[index].d == 0.0) {
-        distance = "Remote"
+        distance = " Remote"
     } else {
-        distance = String(format: "%.1f miles away", dbArr.dbData[index].d)
+        distance = String(format: " %.1f miles away", dbArr.dbData[index].d)
     }
     
     subtext.text = distance
     subtext.textColor = UIColor.gray
     subtext.font = UIFont(name: text.font.fontName, size: 16)
     subtext.textAlignment = NSTextAlignment.left
-    subtext.backgroundColor = UIColor.white
+    subtext.backgroundColor = UIColor.systemGray5
     subtext.layer.masksToBounds = true
     subtext.layer.cornerRadius = 5
     
+    postext.text = " " + dbArr.dbData[index].position!
+    postext.textColor = UIColor.black
+    postext.font = UIFont.init(name: "Poppins-SemiBold", size: 20)
+    postext.textAlignment = NSTextAlignment.left
+    postext.backgroundColor = UIColor.systemGray5
+    postext.layer.masksToBounds = true
+    postext.layer.cornerRadius = 5
+    
     
     view.addSubview(subtext)
+    view.addSubview(postext)
     //distance.text = String(format: "%.1f miles away", dbArr.dbData[index].d)
     
     return view
