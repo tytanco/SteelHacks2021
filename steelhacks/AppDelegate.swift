@@ -37,16 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     let imgurl = document.get("imageURL")
-                    let gsReference = storage.reference(forURL: imgurl as! String)
                     let orgName = document.get("name")
                     let posName = document.get("position")
-
-                    gsReference.getData(maxSize: 20 * 1024 * 1024) {
-                        data, error in
-                        if let error = error {
-                            print(error)
-                        } else {
-                            dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String)))
+                    if (imgurl  != nil && orgName != nil && posName != nil){
+                        let gsReference = storage.reference(forURL: imgurl as! String)
+                        gsReference.getData(maxSize: 20 * 1024 * 1024) {
+                            data, error in
+                            if let error = error {
+                                print(error)
+                            } else {
+                                dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String)))
+                            }
                         }
                     }
                 }
@@ -131,6 +132,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             }
         }
     }
+    
+//    func getDistance(var lat, var lon, var plat, varplon){
+//
+//    }
 
 }
 
