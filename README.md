@@ -1,4 +1,4 @@
-#SteelHacks 2021: GoServe
+# SteelHacks 2021: GoServe
 ## Inspiration
 For our project, we started out by thinking of ways to connect with others and engage with the community. From this, we developed the idea of GoServe, an app focused on streamlining the connection between volunteers and organizations in need. Service is an important facet of our education as college students that not only cultivates new relationships, but can present unique opportunities for professional development and personal fulfillment. Despite this, finding volunteering opportunities can prove complicated or confusing, especially within a specific technical field or niche interest. The COVID-19 pandemic has compounded such issues by forcing companies to operate online, further hindering their ability to recruit volunteers. To help resolve this, we created a platform that promotes direct communication between volunteers and organizations, fostering a community between them. 
 
