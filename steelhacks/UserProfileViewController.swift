@@ -8,8 +8,6 @@
 import UIKit
 import Firebase
 
-// TODO: move database query to AppDelegate
-
 class UserProfileViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
@@ -25,7 +23,5 @@ class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //username.text = Auth.auth().currentUser?.uid
     }
 }
