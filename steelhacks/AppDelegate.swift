@@ -35,13 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                 print("Error getting documents: \(err)")
             } else {
                 //self.size = querySnapshot!.documents.count
-                
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     let imgurl = document.get("imageURL")
                     let orgName = document.get("name")
                     let posName = document.get("position")
-                    
                     
                     if (imgurl  != nil && orgName != nil && posName != nil){
                         let local = document.get("location") as! GeoPoint
@@ -53,14 +51,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                             if let error = error {
                                 print(error)
                             } else {
-                                dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String)))
+                                dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String), d: (d)))
+                                dbArr.dbData.sort{ $0.d < $1.d }
+
+                                print(dbArr.dbData.count)
                             }
                         }
                     }
                 }
-                print("done with pictures")
+                
+                
             }
+            
+            
+            
         }
+        
         return true
     }
     
@@ -164,6 +170,7 @@ struct databaseData {
     let image: UIImage?
     let name: String?
     let position: String?
+    let d: Double
     
 }
 
@@ -176,4 +183,6 @@ struct dbArr {
     //static var imageArr: Array<UIImage> = Array()
     static var dbData: Array<databaseData> = Array()
 }
+
+
 
