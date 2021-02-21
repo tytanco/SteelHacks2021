@@ -277,20 +277,40 @@
             </objects>
             <point key="canvasLocation" x="-1757.9710144927537" y="-305.35714285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="ZSp-lP-d7m">
             <objects>
                 <viewController id="NDs-Jy-Uxe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M3Q-BA-6NE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background3" translatesAutoresizingMaskIntoConstraints="NO" id="cl4-HZ-dnM">
+                                <rect key="frame" x="0.0" y="456" width="414" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="Jaj-B4-acS">
+                                <rect key="frame" x="-19" y="0.0" width="433" height="457"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="iFc-FE-1mP">
+                                <rect key="frame" x="0.0" y="456" width="414" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-wJ-HM3">
+                                <rect key="frame" x="174" y="592" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZcA-HA-OB1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle.fill" catalog="system" id="lyq-f4-NN3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOs-we-Uci" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="503"/>
+            <point key="canvasLocation" x="34.782608695652179" y="502.90178571428567"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="F1d-Ny-T9P">
@@ -333,6 +353,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sDg-3j-HWm"/>
+                        <segue destination="NDs-Jy-Uxe" kind="relationship" relationship="viewControllers" id="zoc-xs-znN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tN5-5i-RF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -353,7 +374,11 @@
         <image name="VolunteerSignUp" width="295" height="48"/>
         <image name="WelcomeBackground" width="375" height="510"/>
         <image name="WelcomeButton" width="250" height="48"/>
+        <image name="background1" width="375" height="440"/>
+        <image name="background2" width="370" height="372"/>
+        <image name="background3" width="370" height="372"/>
         <image name="link" catalog="system" width="128" height="122"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
