@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="-3626.0869565217395" y="-305.35714285714283"/>
         </scene>
-        <!--Explore-->
+        <!--Connect-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="steelhacks" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" image="link" catalog="system" id="3BR-4S-V9v"/>
+                    <tabBarItem key="tabBarItem" title="Connect" image="link" catalog="system" id="3BR-4S-V9v"/>
                     <navigationItem key="navigationItem" id="4iz-ZO-jhb"/>
                     <connections>
                         <outlet property="kolodaView" destination="gSq-Gf-D95" id="NBj-LH-2Ox"/>
@@ -113,6 +113,22 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="-305.35714285714283"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="Z8a-vK-ZNa">
+            <objects>
+                <viewController id="Tdo-dX-fnB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G5c-od-7eu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dCX-gV-ea9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Explore" image="safari.fill" catalog="system" id="TZ0-NS-ApN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLt-Ib-y9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="-1959"/>
         </scene>
         <!--Chat-->
         <scene sceneID="gXr-3k-hgs">
@@ -423,8 +439,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sDg-3j-HWm"/>
-                        <segue destination="NDs-Jy-Uxe" kind="relationship" relationship="viewControllers" id="zoc-xs-znN"/>
+                        <segue destination="Tdo-dX-fnB" kind="relationship" relationship="viewControllers" id="RJw-vk-zpf"/>
                         <segue destination="cz3-iy-spa" kind="relationship" relationship="viewControllers" id="j4a-e9-EZN"/>
+                        <segue destination="NDs-Jy-Uxe" kind="relationship" relationship="viewControllers" id="zoc-xs-znN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tN5-5i-RF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -455,6 +472,7 @@
         <image name="location" width="306" height="71"/>
         <image name="notifications" width="30" height="30"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="safari.fill" catalog="system" width="128" height="121"/>
         <image name="separator" width="303" height="1"/>
         <image name="settings" width="30" height="31"/>
         <systemColor name="labelColor">

@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             } else {
                 //self.size = querySnapshot!.documents.count
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    //print("\(document.documentID) => \(document.data())")
                     let imgurl = document.get("imageURL")
                     let orgName = document.get("name")
                     let posName = document.get("position")
@@ -45,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                     if (imgurl  != nil && orgName != nil && posName != nil && bio != nil){
                         let local = document.get("location") as! GeoPoint
                         let d = self.getDistance(lat:local.latitude, lon:local.longitude, plat:self.userPosition.lat, plon:self.userPosition.lon)
-                        print(d)
                         let gsReference = storage.reference(forURL: imgurl as! String)
                         gsReference.getData(maxSize: 20 * 1024 * 1024) {
                             data, error in
@@ -54,8 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
                             } else {
                                 dbArr.dbData.append(databaseData(image: UIImage(data: data!)!, name: (orgName as! String), position: (posName as! String), d: (d), bio: (bio as! String)))
                                 dbArr.dbData.sort{ $0.d < $1.d }
-                                print(dbArr.dbData[0].d)
-                                print(dbArr.dbData.count)
                             }
                         }
                     }
@@ -84,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let newLocation:CLLocation = locations.last! as CLLocation
-        print("current position: \(newLocation.coordinate.longitude) , \(newLocation.coordinate.latitude)")
+        //print("current position: \(newLocation.coordinate.longitude) , \(newLocation.coordinate.latitude)")
         userPosition = usrPos.init(lat: newLocation.coordinate.latitude, lon: newLocation.coordinate.longitude)
      
     }
